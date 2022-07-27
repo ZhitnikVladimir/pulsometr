@@ -71,13 +71,17 @@
             color: #646464
 .map
     min-height: 630px
-    background: url("../img/bg3.jpg") center center/cover  no-repeat
-    &_info
+    position: relative
+    .map_info
+        position: absolute
         width: 460px
         height: 270px
         background: #C70101
         padding: 50px 53px 56px 
-        margin: 0 auto
+        left: 50%
+        transform: translateX(-50%)
+
+        z-index: 2        
     &_title
         text-align: center
         font-weight: 500
@@ -111,4 +115,7 @@
             margin-left: 0px
         .icon_color
             color: #fff
+        
+
+
     
