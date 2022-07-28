@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <script src="https://kit.fontawesome.com/7cf93a9e59.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/slick.css">
@@ -27,7 +29,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+380988781026" class="header__fone">+38 (098) 878-10-26</a>
-                    <button class="button">ЗАКАЗАТЬ ЗВОНОК</button>
+                    <button data-modal="consult" class="button">ЗАКАЗАТЬ ЗВОНОК</button>
                 </div>
             </header>
             <div class="promo__wrapper">
@@ -38,7 +40,7 @@
                     <div class="promo__icon"><img src="./img/poshta.png" alt="" class="promo__img">Бесплатная доставка</div>
                     <div class="promo__icon"><img src="./img/forum.png" alt="" class="promo__img">Ответим на все вопросы</div>
                 </div>
-                <button class="button main_button">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
+                <button data-modal="consult" class="button main_button">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
                 <div class="promo__link">
                     или
                     <a href=""><u>ПЕРЕЙТИ В КАТАЛОГ</u></a>
@@ -75,10 +77,10 @@
         <h2 class="consult_title">Получите бесплатную консультацию<br> по подбору пульсометра </h2>
         <h3 class="consult_subtitle">Просто заполните форму заявки<br> и мы перезвоним вам в течении 10 минут
         </h3>
-        <form action="" class="feed-forms">
+        <form id="consult-form" action="" class="feed-forms">
         <input name="name" class="btn_name" type="text" placeholder="Логин"></ш>
         <input name="phone" class="btn_name" type="number" placeholder="Ваш телефон"></input>
-        <input required name="email" class="btn_name" type="emal" placeholder="Ваш E-mail"></input>
+        <input name="email" class="btn_name" type="emal" placeholder="Ваш E-mail"></input>
         <button class="button button_submit">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
     </form>
         </div>
@@ -108,7 +110,7 @@
             <div class="catalog-item__content catalog-item__content_active">
                 <img src="./img/pulsometr.png" alt="" class="catalog-item__img">
                 <div class="catalog-item__title">
-                    Пульсометр Polar FT1
+                    Пульсометр Polar FT2
                 </div>
                 <div class="catalog-item__subtitle">
                     Для первых шагов в тренировках, основанных на сердечном ритме
@@ -442,9 +444,40 @@
     </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.045720678125!2d34.559402899999995!3d48.6089681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbd71da318fd2b%3A0x1e13379b6e0cfe9a!2zNUgsINGD0LsuINCS0L7QuNC90L7Qsi3QsNGE0LPQsNC90YbQtdCyLCA10JMsINCa0LDQvNC10L3RgdC60L7QtSwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDUxOTA5!5e0!3m2!1sru!2sua!4v1658946953046!5m2!1sru!2sua" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+<div class="overlay">
+    <div class="moda" id="consult">
+        <div class="modal__close" data-modal="close">&times;</div>
+        <div class="modal__subtitle">Просто заполните форму заявки</div>
+        <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+        <form action="" class="feed-forms feed-forms_mt25">
+            <input name="name" class="btn_name" type="text" placeholder="Логин"></ш>
+            <input name="phone" class="btn_name" type="number" placeholder="Ваш телефон"></input>
+            <input name="email" class="btn_name" type="emal" placeholder="Ваш E-mail"></input>
+            <button class="button button_submit">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
+        </form>
+    </div>
+
+    <div class="moda" id="order">
+        <div class="modal__close" data-modal="close">&times;</div>
+        <div class="modal__subtitle">Ваш заказ:</div>
+        <div class="modal__descr">Пульсометр Polar FT1</div>
+        <form action="" class="feed-forms feed-forms_mt25">
+            <input name="name" class="btn_name" type="text" placeholder="Логин"></ш>
+            <input name="phone" class="btn_name" type="number" placeholder="Ваш телефон"></input>
+            <input name="email" class="btn_name" type="emal" placeholder="Ваш E-mail"></input>
+            <button class="button button_submit">Купить</button>
+        </form>
+    </div>
+    <div class="moda moda_height" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+    </div>
+</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="./js/slick.min.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
 </body>
 </html>

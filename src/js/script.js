@@ -40,4 +40,43 @@ $('.catalog-item__link').each(function(i){
         $('.catalog-item__info').eq(i).toggleClass('catalog-item__info_active');
     })
   });
+//modal
+$('[data-modal=consult]').on('click', function(){
+    $('.overlay, #consult').fadeIn();
+});
+
+$('.modal__close').on('click', function(){
+    $('.overlay, #consult, #thanks, #order').fadeOut();
+});
+$('.button_mini').each(function(i){
+$(this).on('click', function()  {
+    $('#order .modal__descr').text($('.catalog-item__title').eq(i).text());
+    $('.overlay, #order').fadeIn();
+})
+});
+
+
+function validateForms(form) {
+    $(form).validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Пожалуйста, введите своё имя",
+            phone: "Пожалуйста, введите свой номер",
+            email: {
+              required: "Пожалуйста, введите свою почту",
+              email: "Ваша почта должна содержать name@domain.com"
+            }
+          }
+    });
+}
+validateForms('#consult-form')
+validateForms('#consult form')
+validateForms('#order form')
   });
