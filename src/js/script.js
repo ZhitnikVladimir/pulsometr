@@ -79,4 +79,6 @@ function validateForms(form) {
 validateForms('#consult-form')
 validateForms('#consult form')
 validateForms('#order form')
+
+$('input[name=phone]').mask("+38 (099) 999-99-99")
   });
