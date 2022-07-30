@@ -28,10 +28,33 @@
         font-weight: 500
         font-size: 14px
         color: #fff
+        position: relative
     &__img
         display: block
         margin: 0 auto
         margin-bottom: 20px
+        &_poshta
+            animation-name: poshta
+            animation-duration: 4s
+            animation-iteration-count: infinite
+            &:hover
+                animation-play-state: paused
+        &_forum
+            animation-name: forum
+            animation-duration: 4s
+            animation-iteration-count: infinite
+            &:hover
+                animation-play-state: paused
+        &_time2
+            position: absolute
+            top:11%
+            width: 8%
+            left: 47%
+            animation-name: timer
+            animation-duration: 4s
+            animation-iteration-count: infinite
+            &:hover
+                animation-play-state: paused
     &__link
         margin-top: 8px
         font-weight: 500
